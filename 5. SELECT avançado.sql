@@ -1,0 +1,16 @@
+USE employees;
+SELECT * FROM employees.dept_emp;
+SELECT * FROM employees WHERE last_name = "koblick";
+SELECT * FROM employees WHERE emp_no = 491088;
+SELECT * FROM salaries WHERE salary <= 65000;
+SELECT * FROM titles WHERE emp_no >= 11500;
+SELECT DISTINCT title FROM titles;
+SELECT * FROM salaries WHERE salary > 125000 AND from_date > "1991-12-12";
+SELECT * FROM salaries ORDER BY emp_no ASC;
+SELECT * FROM salaries ORDER BY salary;
+SELECT * FROM titles ORDER BY title DESC;
+SELECT * FROM salaries ORDER BY salary DESC LIMIT 10;
+SELECT * FROM employees WHERE gender = "F" ORDER BY hire_date DESC LIMIT 5;
+SELECT * FROM titles ORDER BY title ASC LIMIT 5;
+SELECT * FROM salaries ORDER BY salary DESC LIMIT 4;
+SELECT MIN(salary) FROM salaries;

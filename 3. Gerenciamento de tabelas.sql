@@ -1,0 +1,32 @@
+CREATE DATABASE teste_tipo_dados;
+USE teste_tipo_dados;
+CREATE TABLE produtos (nome VARCHAR(55), sku CHAR(11), informacoes MEDIUMTEXT);
+CREATE TABLE cadastro (nome VARCHAR(55), sobrenome VARCHAR(55));
+INSERT INTO produtos (nome, sku, informacoes) VALUES ("Tablet A10", "Galaxy", "Tablet da samsung Galaxy A10");
+SELECT * FROM produtos;
+INSERT INTO cadastro (nome, sobrenome) VALUES ("Alysson Hyago", "Jessyca Dayse");
+INSERT INTO cadastro (nome, sobrenome) VALUES ("Carmem Lucia", "Issac PAIA");
+SELECT * FROM cadastro;
+CREATE TABLE servidores (nome VARCHAR(100), espaco_disco INT(10), ligado BOOL);
+INSERT INTO servidores (nome, espaco_disco, ligado) VALUES ("servidor 2", 48930, 1);
+SELECT * FROM servidores;
+USE teste_tipo_dados;
+CREATE TABLE aniversario (nome VARCHAR(100), data_nascimento DATE);
+SHOW DATABASES;
+SELECT * FROM aniversario;
+INSERT INTO aniversario (nome, data_nascimento) VALUES ("Alysson Hyago", "1996-03-01");
+SELECT * FROM aniversario;
+CREATE TABLE funcionarios (nome VARCHAR(100));
+ALTER TABLE funcionarios ADD COLUMN profissao VARCHAR(100);
+INSERT INTO funcionarios (nome, profissao) VALUES ("Alysson", "ENG ELETRICISTA");
+SELECT * FROM funcionarios;
+SELECT * FROM cadastro;
+ALTER TABLE cadastro DROP COLUMN nome;
+ALTER TABLE cadastro DROP COLUMN sobrenome;
+DROP TABLE cadastro;
+CREATE TABLE cadastro (nome VARCHAR(50), sobrenome VARCHAR(50));
+INSERT INTO cadastro (nome, sobrenome) VALUES ("Alysson Hyago", "Pereira de Oliveira");
+SELECT * FROM cadastro;
+ALTER TABLE aniversario MODIFY COLUMN data_nascimento DATE;
+
+
